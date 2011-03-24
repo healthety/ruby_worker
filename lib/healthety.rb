@@ -1,0 +1,2 @@
+module Healthety
+end
