@@ -1,2 +1,1 @@
-module Healthety
-end
+require "healthety/worker"
