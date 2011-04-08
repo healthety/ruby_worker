@@ -12,7 +12,8 @@ Gem::Specification.new do |s|
   s.summary     = %q{}
   s.description = %q{Healthety reporter}
 
-  s.add_development_dependency("rspec", ["~> 2.5.0"])
+  s.add_development_dependency("rspec", "~> 2.5.0")
+  s.add_development_dependency("mocha")
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- spec/*`.split("\n")
