@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = "Martin Jagusch"
   s.email       = "m@martinjagusch.com"
-  s.homepage    = ""
-  s.summary     = %q{}
-  s.description = %q{Healthety reporter}
+  s.homepage    = "http://github.com/healthety/ruby_worker"
+  s.description = "The Ruby Worker sends JSON data via UDP packets to a given host."
+  s.summary     = s.description
 
   s.add_development_dependency("rspec", "~> 2.5.0")
   s.add_development_dependency("mocha")
