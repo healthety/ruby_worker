@@ -1,18 +1,18 @@
 module Healthety
   class Worker
-    attr_reader :name, :_interval, :_value
+    attr_reader :name
 
     def initialize(name, &block)
       @name = name.to_s
       @block = block
     end
 
-    def interval(interval)
-      @_interval ||= interval
+    def interval(interval = nil)
+      @interval = interval || @interval
     end
 
-    def value(value)
-      @_value = value.to_s
+    def value(value = nil)
+      @value = value || @value
     end
 
     def perform
