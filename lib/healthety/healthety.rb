@@ -10,8 +10,8 @@ module Healthety
     start
   end
 
-  def host(host)
-    @host = host
+  def server(server)
+    @server = server
   end
 
   def port(port)
@@ -24,7 +24,7 @@ module Healthety
 
   def start
     puts message
-    transmission = Transmission.new(@host, @port)
+    transmission = Transmission.new(@server, @port)
 
     # Catch Ctrl-C and terminate all worker threads.
     trap("INT") { @threads.map(&:kill) }
@@ -44,7 +44,7 @@ module Healthety
 
   def message
     <<-EOM
-=> Workers starting to send to #{@host}:#{@port}
+=> Workers starting to send to #{@server}:#{@port}
 => Ctrl-C to stop
 EOM
   end
