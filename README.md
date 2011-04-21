@@ -1,12 +1,12 @@
 # Ruby Worker
 
-The Ruby Worker sends JSON data via UDP packets to a given server at a defined interval.
+The Ruby Worker sends JSON wrapped data via UDP packets to a given server at a defined interval.
 
-### Installation
+## Installation
 
-    gem install healthety
+    $ gem install healthety
 
-### Usage
+## Usage
 
     require "healthety"
 
@@ -16,7 +16,7 @@ The Ruby Worker sends JSON data via UDP packets to a given server at a defined i
 
       worker :load_average do
         interval 0.5
-        # Get load average with a system call (OS X)
+        # Gets load average with a system call (Mac OS X)
         value `w | head -n1 | cut -f4 -d":" | cut -f2 -d" "`.to_f
       end
 
