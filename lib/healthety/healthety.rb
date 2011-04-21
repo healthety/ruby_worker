@@ -33,7 +33,7 @@ module Healthety
       @threads << Thread.new do
         loop do
           worker.perform
-          transmission.send(worker.name, worker.value)
+          transmission.send(worker.name, worker.value, Time.now.utc)
           sleep worker.interval
         end
       end

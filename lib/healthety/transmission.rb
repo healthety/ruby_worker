@@ -10,8 +10,11 @@ module Healthety
       @socket = UDPSocket.new
     end
 
-    def send(name, value)
-      data = {:name => name, :value => value, :host => @host}.to_json
+    def send(name, value, created_at)
+      data = {
+        :name => name, :value => value,
+        :created_at => created_at, :host => @host
+      }.to_json
       @socket.send(data, 0, @server, @port)
       $stdout << "#{name}: #{value}\n"
     end
