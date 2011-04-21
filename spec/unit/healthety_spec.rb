@@ -9,7 +9,7 @@ module Healthety
 
       expect do
         Healthety.workers do
-          host "127.0.0.1"
+          server "127.0.0.1"
           port 8124
 
           worker :test do

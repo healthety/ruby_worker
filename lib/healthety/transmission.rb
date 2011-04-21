@@ -3,15 +3,15 @@ require "json"
 
 module Healthety
   class Transmission
-    def initialize(host, port)
-      @host = host
+    def initialize(server, port)
+      @server = server
       @port = port
       @socket = UDPSocket.new
     end
 
     def send(name, value)
       data = {:name => name, :value => value}.to_json
-      @socket.send(data, 0, @host, @port)
+      @socket.send(data, 0, @server, @port)
       $stdout << "#{name}: #{value}\n"
     end
   end
