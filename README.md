@@ -1,6 +1,6 @@
 # Ruby Worker
 
-The Ruby Worker sends JSON data via UDP packets to a given host at a defined interval.
+The Ruby Worker sends JSON data via UDP packets to a given server at a defined interval.
 
 ### Installation
 
