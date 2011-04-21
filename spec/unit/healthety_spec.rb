@@ -10,7 +10,7 @@ module Healthety
       expect do
         Healthety.workers do
           server "127.0.0.1"
-          port 8124
+          port 41234
 
           worker :test do
             interval 0.5

@@ -12,7 +12,7 @@ The Ruby Worker sends JSON data via UDP packets to a given server at a defined i
 
     Healthety.workers do
       server "127.0.0.1"
-      port 8124
+      port 41234
 
       worker :load_average do
         interval 0.5
