@@ -12,8 +12,9 @@ Gem::Specification.new do |s|
   s.description = "The Ruby Worker sends JSON data via UDP packets to a given host."
   s.summary     = s.description
 
+  s.add_dependency("json", "~> 1.5.1")
   s.add_development_dependency("rspec", "~> 2.5.0")
-  s.add_development_dependency("mocha")
+  s.add_development_dependency("mocha", "~> 0.9.12")
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- spec/*`.split("\n")
