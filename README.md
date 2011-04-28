@@ -1,6 +1,6 @@
 # Ruby Worker
 
-The Ruby Worker sends JSON wrapped data via UDP packets to a given server at a defined interval.
+The Ruby Worker sends JSON wrapped data via UDP packets to a given host at a defined interval.
 
 ## Installation
 
@@ -14,7 +14,7 @@ $ gem install healthety
 require "healthety"
 
 Healthety.workers do
-  server "127.0.0.1"
+  host "localhost"
   port 41234
 
   worker :load_average do
@@ -29,6 +29,8 @@ Healthety.workers do
   end
 end
 ```
+
+That's all you need to do to define two different workers.
 
 ### Defining helpers
 
@@ -57,7 +59,7 @@ require "healthety"
 require "connection_helper"
 
 Healthety.workers do
-  server "127.0.0.1"
+  host "localhost"
   port 41234
 
   worker :user_count do

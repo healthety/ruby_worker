@@ -13,7 +13,7 @@ module Healthety
     it "should start" do
       expect do
         Healthety.workers do
-          server "127.0.0.1"
+          host "localhost"
           port 41234
 
           worker :test do
@@ -29,7 +29,7 @@ module Healthety
 
       expect do
         Healthety.workers do
-          server "127.0.0.1"
+          host "localhost"
           port 41234
 
           worker :test do
