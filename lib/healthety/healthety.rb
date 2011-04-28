@@ -22,6 +22,12 @@ module Healthety
     @workers << Worker.new(name, &block)
   end
 
+  # Makes the methods defined in the helper modules given in `extensions`
+  # available to the workers.
+  def helpers(*extensions)
+    Worker.class_eval { include(*extensions) } if extensions.any?
+  end
+
   def start
     puts message
     transmission = Transmission.new(@server, @port)
