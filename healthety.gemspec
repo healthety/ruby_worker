@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = "Martin Jagusch"
   s.email       = "m@martinjagusch.com"
-  s.homepage    = "http://github.com/healthety/ruby_worker"
-  s.description = "The Ruby Worker sends JSON data via UDP packets to a given host."
+  s.homepage    = "https://github.com/healthety/ruby_worker"
+  s.description = "Sends JSON wrapped data via UDP packets to a given host."
   s.summary     = s.description
 
   s.add_dependency("json", "~> 1.5.1")
