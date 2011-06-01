@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency("json", "~> 1.5.1")
   s.add_development_dependency("rspec", "~> 2.5.0")
   s.add_development_dependency("mocha", "~> 0.9.12")
+  s.add_dependency("daemons", "~> 1.1.3")
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- spec/*`.split("\n")

@@ -1,3 +1,5 @@
+require "daemons"
+
 module Healthety
   extend self
 
@@ -7,7 +9,13 @@ module Healthety
 
     instance_eval(&block)
 
-    start
+    # Try to daemonize only if a command-line argument is given.
+    if ARGV.any?
+      Daemons.run_proc("healthety") { start }
+    else
+      puts message
+      start
+    end
   end
 
   def host(host)
@@ -29,7 +37,6 @@ module Healthety
   end
 
   def start
-    puts message
     transmission = Transmission.new(@host, @port)
 
     # Catch Ctrl-C and terminate all worker threads.
